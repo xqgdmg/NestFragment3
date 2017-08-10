@@ -4,7 +4,7 @@ package com.example.administrator.nestfragment3;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,13 +22,13 @@ public class Fragment03 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment03 , null);
-        View fragmentLayout = rootView.findViewById(R.id.fl);
+        View fragmentLayout = rootView.findViewById(R.id.flFragment03);
 
         View tv = rootView.findViewById(R.id.tv);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getChildFragmentManager().beginTransaction().add(R.id.fl,new Fragment04(),"c").commit();
+                getChildFragmentManager().beginTransaction().add(R.id.flFragment03,new Fragment04(),"c").commit();
             }
         });
 

@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
 
-        frameLayout = (FrameLayout) findViewById(R.id.fl);
+        frameLayout = (FrameLayout) findViewById(R.id.flAct);
 
-        getSupportFragmentManager().beginTransaction().add(R.id.fl,new Fragment01(),null).commit();
+        getFragmentManager().beginTransaction().add(R.id.flAct,new Fragment01(),null).commit();
 
     }
 }
